@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  /* background-color: #000; */
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+/* buttons */
+.checkbox {
+  font-size: 30px;
+  width: 1.5rem;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.buttons span {
+  color: #ffd;
+  margin-left: 10px;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button {
+  background-color: #7b9ad4;
+  border-radius: 100px;
+  color: #040838f3;
+  cursor: pointer;
+  margin: 1rem;
+  font-family: "Roboto", sans-serif;
+  padding: 7px 20px;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1.3rem;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  transform: translateY(-2px);
+}
+
+/* code editor */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.code-editor {
+  width: 90vw;
+  height: 90vh;
+  box-shadow: 5px 20px 50px #000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgb(230, 230, 225);
+  border-radius: 1rem;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.code {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  overflow-y: auto;
+
+  /* background-color: #123; */
+  background: linear-gradient(to bottom, #302b63, #0f0c29, #24243e);
+  padding: 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+h1 {
+  font: 600 1.2rem sans-serif;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+h1 > img {
+  width: 1.3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.code textarea {
+  width: 100%;
+  height: calc(100% - 4rem);
+  background-color: #333;
+  color: #c2fbd7;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  resize: vertical;
+}
+
+.code textarea:focus {
+  outline: none;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.code textarea::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.code textarea::-webkit-scrollbar-thumb {
+  background-color: #ff2871;
+  border-radius: 0.4rem;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(230, 230, 225);
+}
+
+a {
+  background-color: lime;
+  color: #fff;
+  padding: 0 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  float: right;
+  cursor: pointer;
+}
+
+/* side_bar */
+
+.hole {
+  position: relative;
+  background-color: rgb(82, 88, 109);
+  height: 80%;
+  top: 10%;
+  border-radius: 0 0 2rem 0;
+}
+.side-bar_container {
+  width: 20%;
+  height: 100vh;
+  color: rgb(224, 213, 213);
+  transition: all 0.4s;
+  position: absolute;
+  z-index: 1;
+}
+
+.hide_bar {
+  transform: translateX(-100%);
+}
+
+.logout {
+  position: relative;
+  top: 10px;
+}
+.logout .log {
+  position: absolute;
+  right: 10px;
+  margin-top: 1rem;
+  padding: 7px 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #123;
+  color: rgb(250, 250, 250);
+}
+.logout .hum {
+  position: absolute;
+  right: -15%;
+  top: -1.65rem;
+  background-color: rgb(82, 88, 109);
+  border: 1px solid rgb(82, 88, 109);
+  margin-top: 1rem;
+  /* display: block; */
+  cursor: pointer;
+  width: 4rem;
+  padding: 7px 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 10rem;
+  border-radius: 50%;
+  margin-top: 4rem;
+  margin-bottom: 10px;
+}
+.profile p {
+  font-size: 1.3rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}
+
+.project_decsription {
+  position: absolute;
+  bottom: 1rem;
+  left: 50px;
+}
+
+.project_decsription span {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.autors {
+  margin-top: 15%;
+  text-align: center;
+}
+
+.autors .names {
+  font-size: 2rem;
+}
+
+.autors .names span {
+  font-style: italic;
+  margin-left: 1.5rem;
+}
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.title span {
+  margin-left: 7rem;
+}
+
+.blurish {
+  transition: backdrop-filter 0.4s;
+}
+.overlay {
+  width: 98vw;
+  height: 98vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position: absolute;
+}

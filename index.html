@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- <div class="side-bar_container bar"> -->
+    <div class="side-bar_container bar hide_bar">
+      <div class="hole">
+        <div class="logout">
+          <button class="log">logout <i class="fa fa-sign-out"></i></button>
+          <button class="hum"><i class="fa fa-bars menu"></i></button>
+        </div>
+        <div class="profile">
+          <img src="images/animi_avatar.jpg" alt="" />
+          <p class="person_name">kirubel</p>
+        </div>
+
+        <div class="autors">
+          <p class="title">NAME <span>ID</span></p>
+        </div>
+        <div class="project_decsription">
+          Live HTML, CSS, JS editor <br />
+          <span>&copy 2014E.C uog students</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blurish"></div>
+
+    <div class="buttons">
+      <input type="checkbox" class="checkbox" /><span
+        >automatic excute code</span
+      >
+      <button class="save" name="save">Save <i class="fa fa-save"></i></button>
+      <button class="run">Run <i class="fa fa-play"></i></button>
+    </div>
+    <div class="container">
+      <div class="code-editor">
+        <div class="code">
+          <div class="html-code">
+            <h1><img src="images/html-icon.png" alt="" />HTML</h1>
+            <textarea></textarea>
+          </div>
+
+          <div class="css-code">
+            <h1><img src="images/css-icon.png" alt="" />CSS</h1>
+            <textarea></textarea>
+          </div>
+
+          <div class="js-code">
+            <h1><img src="images/js-icon.png" alt="" />JS</h1>
+            <textarea spellcheck="false"></textarea>
+          </div>
+        </div>
+        <iframe id="result"></iframe>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
